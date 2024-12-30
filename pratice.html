@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part - 9 (js)</title>
+</head>
+<body>
+    
+
+    <script>
+let input = document.createElement('input');
+let btn = document.createElement('button');
+btn.innerText = "Click me !!"
+document.querySelector("body").append(input);
+document.querySelector("body").append(btn);
+
+//Ans 2
+input.setAttribute("placeholder" , "username");
+btn.setAttribute("id" , "btn");
+
+//ans 3
+document.querySelector("#btn").style.backgroundColor = "blue";
+document.querySelector("#btn").style.color = "white";
+//ans4
+let h1 = document.createElement("h1");
+// let under = document.createElement('u')
+// under.innerHTML = "Dom Partice"
+h1.innerHTML = "<u> DOM Pratice </u>";
+
+document.querySelector("body").append(h1);
+// h1.appendChild(under);
+h1.style.color = "purple";
+
+//ans5
+
+let para = document.createElement("p");
+para.innerHTML = "Apna college <b>Delta</b> pratice";
+document.querySelector("body").append(para);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
