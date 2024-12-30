@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        // let firstpromise = new Promise((reslove , reject)=>{
+        //     console.log("Babber");
+        //     reject(new Error("Internal Server Error"))
+            
+        // });
+
+        // let promise1 = new Promise((resolve , reject)=>{
+        //     let success = false ;
+        //     if(success){
+        //         resolve("Promise Fulfilled");
+        //     }
+        //     else{
+        //         reject("Promise Rejected");
+        //     }
+        // });
+
+        // promise1.then((message)=>{
+        //     console.log("Then ka message is " + message);
+            
+        // }).catch((error)=>{
+        //     console.log("Error: " + error);
+            
+        // })
+
+        // promise1.then((message)=>{
+        //     console.log("first msg: " + message);
+        //     return "Promise fulfilled second message"
+            
+        // }).then((message)=>{
+        //     console.log("second msg: " + message);
+        //     return "promise fulfilled third message"
+            
+        // }).then((message)=>{
+        //     console.log("third msg : " + message);
+            
+        // }).catch((error)=>{
+        //     console.error(error);
+        // }).finally((message)=>{
+        //     console.log("main to final hu , chalunga pakka");
+            
+        // })
+
+        let promise1 = new Promise((resolve , reject)=>{
+         setTimeout(resolve ,1000, "First");
+        })
+        let promise2 = new Promise((resolve , reject)=>{
+            setTimeout(resolve , 2000,"Second");
+        })
+        let promise3 = new Promise((resolve , reject)=>{
+            setTimeout(resolve , 4000,"Third")
+        })
+
+        Promise.all([promise1 , promise2 , promise3]).then((values)=>{
+            console.log(values);
+            
+        })
+        .catch((error)=>{
+            console.error(error);
+        })
+    </script>
+</body>
+</html>
