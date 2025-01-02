@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let n = 123456;
+        let dummy = n;
+       let count = 0; let rsum = 0; let tsum = 0;
+        while(n != 0){
+            let rem = n % 10;
+            tsum += rem;
+            count++;
+            n = Math.floor(n / 10);
+        }
+        let half = Math.floor(count / 2);
+        while(half != 0){
+            let rem = dummy % 10 ;
+            rsum += rem;
+           dummy =  Math.floor(dummy / 10);
+           half--;
+
+        }
+     let lsum = tsum - rsum;
+  console.log( "Product of left sum and right sum is : " + (lsum * rsum));
+  
+    </script>
+</body>
+</html>
