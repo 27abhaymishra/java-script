@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let n = 12;
+        // let m = 12*12;
+        // let rem1 = n % 10;
+        // let rem2 = m % 10 ;
+        // if(rem1 == rem2){
+        //     console.log("automorphic");
+            
+        // }else{
+        //     console.log("false");
+            
+        // }
+
+// harshed number problem !!!
+        let n = 72;
+        let sum = 0;
+        let m = n;
+        
+        while(n != 0){
+            let rem = n % 10;
+            sum += rem;
+            n = Math.floor(n/10);
+        }
+        if(m % sum == 0){
+            console.log("number is a harshad " + sum);
+            
+        }else{
+            console.log("not a harshad");
+            
+        }
+    </script>
+</body>
+</html>
