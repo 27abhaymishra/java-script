@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <style>
+        body,html{
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+        .container{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(161, 61, 24);
+        }
+        .box{
+            background-color: rgb(110, 58, 38);
+        }
+    </style>
+</head>
+<body>
+             <div class="container">
+                <div class="box">
+                    <h1>Loan Calculator</h1>
+
+                    Principal Amount:  <input type="number" id="p">
+                    Interest Rate:  <input type="number" id="I">
+                   
+                  Tenure: <input type="number" id="T"><br><br>
+                  <button onclick="calc()">Calculate</button>
+                </div>
+             </div>
+            
+
+        <script>
+
+            function calc(){
+         let p = parseInt(document.getElementById('p').value);
+         let i = parseInt(document.getElementById('I').value);
+         let t = parseInt(document.getElementById('T').value);
+
+         let loan = (p*i*(t/12))/100
+        let emi =  (p+loan)/12
+        alert(emi);
+       
+            }
+        </script>
+
+     
+   
+</body>
+</html>
